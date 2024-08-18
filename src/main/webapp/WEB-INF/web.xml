@@ -3,9 +3,23 @@
    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
    xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd"
    version="6.0">
+
+    <!-- Configuración del tiempo de espera de la sesión -->
     <session-config>
         <session-timeout>
             30
-        </session-timeout>
+    </session-timeout>
     </session-config>
+
+ <!-- Definición del Servlet para Login -->
+    <servlet>
+        <servlet-name>LoginControlador</servlet-name>
+        <servlet-class>Controlador.LoginControlador</servlet-class>
+    </servlet>
+
+    <!-- Mapeo del Servlet para Login -->
+    <servlet-mapping>
+        <servlet-name>LoginControlador</servlet-name>
+        <url-pattern>/login</url-pattern>
+    </servlet-mapping>
 </web-app>
